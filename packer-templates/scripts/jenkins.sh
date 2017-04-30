@@ -31,5 +31,10 @@ tar zxvf /tmp/jenkins-config/example-job.tar.gz
 # set permissions or else jenkins can't run jobs
 chown -R jenkins:jenkins /var/lib/jenkins
 
+# Use Java 8 as default
+rm -f /etc/alternatives/java
+ln -s /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java /etc/alternatives/java
+
+
 # restart for jenkins to pick up the new configs
 service jenkins restart
