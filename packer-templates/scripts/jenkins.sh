@@ -6,6 +6,7 @@ apt-get install -y openjdk-7-jre openjdk-7-jdk unzip dos2unix
 wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add -
 echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list
 
+sudo add-apt-repository ppa:openjdk-r/ppa
 apt-get update
 apt-get install -y jenkins
 apt-get upgrade
